@@ -1,0 +1,13 @@
+button {
+    color: red;
+    text-decoration: underline;
+    border: 2px solid green;
+    border-radius: 20px ;
+    display: block;
+} 
+
+p {
+    background-color: black;
+    color: white;
+    display: inline;
+}
