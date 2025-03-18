@@ -1,71 +1,26 @@
-const person = {
-    x:10,
-    fName: 'Haider',
-    lNmae: 'Aftab',
-    hobbies: ['coding', 'gym'],
-    isMarried: false,
-    gfn: function() {
-        return 'Haider Aftab'
-    },
-    address: {
-        hno: 1,
-        street: 1,
+const obj1 = {
+    fname: 'haider',
+    lname: 'aftab',
+    getfullname: function() {
+        if(this.lname !== undefined)return `${this.fname} ${this.lname}`;
+        return this.fname;
     }
 }
 
-const person1 = {
-    x:10,
-    fName: 'Haider',
-    lNmae: 'Aftab',
-    hobbies: ['coding', 'gym'],
-    isMarried: false,
-    gfn: function() {
-        return 'Haider Aftab'
-    },
-    address: {
-        hno: 1,
-        street: 1,
-    }
-}
-console.log(person.address.street)
+console.log(obj1.getfullname());
 
-const remote = {
-    color: 'black',
-    brand: 'CYZ',
-    dimesions: {height: 1, width: 1},
-    turnOff: function() {
-    }
+const obj2 = {
+    lname: 'ziya',
+    fname: 'baloch',
+    // getfullname: function() {
+    //     if (this.lname !== undefined)return `${this.lname} ${this.fname}`;
+    //     return this.fname;
+    // }
 }
 
-let fname = 'haider'
-let fname2 = fname 
+obj2.__proto__ = obj1;
+obj1.__proto__ = null;
 
-console.log(fname)
-
-fname2 = 'ali'
-console.log(fname)
-
-let p1 = {
-    fname: 'haider'
-}
-
-let p2 = p1
-
-p2.fname = 'ali'
-
-console.log(p2)
-console.log(p1)
-
-let p11 = {
-    lname: 'ch',
-    address: {
-        h: 1,
-        s: 1,
-    } 
-}
-
-const p11kastring = JSON.stringify(p11)
- console.log(p11kastring)
-
- let p22 = JSON.parse(p11kastring)
- console.log(p22)
+console.log(obj1.getfullname());
+console.log(obj2.getfullname());
+console.log(obj2.toString());
