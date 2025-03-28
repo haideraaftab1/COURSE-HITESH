@@ -24,3 +24,7 @@ obj1.__proto__ = null;
 console.log(obj1.getfullname());
 console.log(obj2.getfullname());
 console.log(obj2.toString());
+
+
+
+
